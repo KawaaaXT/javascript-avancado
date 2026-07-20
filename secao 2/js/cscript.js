@@ -1,19 +1,16 @@
-
-const form = document.querySelector('#formulario')
+ const product = document.querySelector('#produto')
+ const preco = document.querySelector('#preco')
+ const quantidade = document.querySelector('#quantidade')
+ const resultado = document.querySelector('#resul')
+ const form = document.querySelector('#formulario')
+ const cadastro = []
 form.addEventListener('submit', iniciar)
-const cadastro = []
+
 
 function iniciar(evento){
     evento.preventDefault()
     console.log('Tudo OK')
-    const product = document.querySelector('#produto')
-    const preco = document.querySelector('#preco')
-    const quantidade = document.querySelector('#quantidade')
-    const resultado = document.querySelector('#resul')
-    
-    
-    
-
+  
     if (product.value.trim() === ""){
         alert('[ERROR] Preencha os campos vazios para poder continuar.')
         return
@@ -36,8 +33,6 @@ function iniciar(evento){
     })
     console.log(estoqueTotal)
 
-
-
     product.value = ''
     preco.value =  ''
     quantidade.value = ''
@@ -54,10 +49,6 @@ function iniciar(evento){
      
     `
     }
-
-    
-
-   
 
 function criandoosProdutos(produto, preco, quantidade){
     return{
