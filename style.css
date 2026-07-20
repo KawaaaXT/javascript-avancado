@@ -36,9 +36,9 @@ p{
 main{
     margin: auto;
     margin-top: 10px;
-    border-radius: 5px;
-    width: 570px;
-    height: 500px;
+    border-radius: 10%;
+    width: 850px;
+    height: 800px;
     padding: 10px;
     background-color: rgb(149, 227, 239);
 }
