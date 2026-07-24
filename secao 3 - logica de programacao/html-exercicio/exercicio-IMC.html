@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estyle/style.css">
+    <title>Exercicio IMC</title>
+</head>
+<body>
+    <header>
+        <h1 class="header">
+            TABELA IMC
+        </h1>
+    </header>
+    <main>
+        <section id="detalhes">
+            <div>
+                <h2 class="imc">IMC</h2>
+                <ul>
+                    <li>
+                        Menos do que 18,5 (Abaixo Do Peso)
+                    </li>
+                    <li>
+                        Entre 18,5 e 24,9 (Peso Normal)
+                    </li>
+
+                    <li>
+                        Entre 25 e 29,9 (SobrePeso)
+                    </li>
+
+                    <li>
+                        Entre 30 e 34,9 (Obesidade Grau 1)
+                    </li>
+
+                    <li>
+                        Entre 35 e 39,9 (Obesiade Grau 2)
+                    </li>
+                    <li>
+                        Mais do que 40 (Obesiade Grau 3)
+                    </li>
+                </ul>
+               
+
+                
+            </div>
+        </section> <!--Fim section detalhes-->
+
+        <section>
+            <div>
+               <form id="formulario">
+
+                <h1 class="imc">Calcule seu IMC</h1>
+                <p>
+                    Seu nome : <input type="text" name="txtnome" id="nome">
+                </p>
+                
+                <p>
+                    Sua Idade : <input type="text" name="txtidade" id="idade">
+                </p>
+
+                <p>
+                    Peso : <input type="text" name="txtpeso" id="peso" ">
+                </p>
+
+                <p>
+                    Altura: <input type="text" name="txtaltura" id="altura" >
+                </p>
+
+                <p>
+                    <button id="btn-enviar" type="submit">Enviar</button>
+                </p>
+
+               </form>
+
+            </div>
+
+            <div id="resultado">
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../Js-Js/imc.js"></script>
+    
+</body>
+</html>
