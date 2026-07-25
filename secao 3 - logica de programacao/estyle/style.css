@@ -18,20 +18,26 @@
 
 
 
+
+
 main{
     margin: auto;
-    width: 800px;
+    width: 650px;
     height: 570px;
     padding: 20px;
     background-color: rgba(142, 226, 248, 0.852);
     border-radius: 5px;
 }
 ul{
+    gap: 10px;
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-content: center;
 
 }
 li{
+  
     font-size: 0.8em;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
@@ -64,7 +70,7 @@ span{
     margin-bottom: 10px;
 }
 
-#peso, #altura, #nome, #idade{
+#peso, #altura, #nome, #idade, #produto, #quantidade, #preco{
     width: 450px;
     padding: 10px;
     margin-bottom: 12px;
