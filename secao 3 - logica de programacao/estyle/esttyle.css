@@ -1,0 +1,39 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    margin: auto;
+    background-color: darkgray;
+    width: 890px;
+    height: 510px;
+    padding: 12px;
+    border-radius: 10px;
+
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(81, 24, 238);
+    text-align: center;
+}
+
+#nomeUsuario, #produto, #precoProduto {
+    padding: 3px;
+    font-size: 1em;
+    color: rgb(128, 126, 221);
+}
+
+#btn{
+    font-size: 1.2em ;
+   
+    padding: 3px;
+}
+
+p{
+    text-align: center;
+    margin-top: 20px;
+}

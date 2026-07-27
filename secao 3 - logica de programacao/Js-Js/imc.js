@@ -94,7 +94,7 @@ function limparTela(){
     suaAltura.value = ''
 }
 
-function mostrarResultado(paciente, cor){
+function mostrarResultado(paciente){
     resul.innerHTML = `
      Seu Nome é : ${paciente.nome} <br>
      Voce tem : ${paciente.idade} Anos <br>
