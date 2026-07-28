@@ -34,10 +34,8 @@ function enviar(evento){
     produtos.push(produto)
     mostrarResultado(produto)
     limparTela()
-
-  
-
 }; // fim da função enviar
+
 
 // função validarCampos
 function validarCampos (){
@@ -48,6 +46,7 @@ function validarCampos (){
     }
     return true
 }; // Fim Da funcao validarCampos
+
 
 // inicio da funcao descontoProduto
 function descontoProduto (valorProduto){
@@ -61,6 +60,7 @@ function descontoProduto (valorProduto){
 
 }; // fim da funcao descontoProduto
 
+
 // inicio da funcao criar Produtos
 function criarProdutos (cliente , produto , preco, desconto){
     return{
@@ -71,6 +71,7 @@ function criarProdutos (cliente , produto , preco, desconto){
     };
 }; // fim da função criar produtos
 
+
 // inicio funcao limpar tela
 function limparTela(){
     nameUsuario.value = ''
@@ -78,10 +79,11 @@ function limparTela(){
     valorProduto.value = ''
 }; // fim da funcao limpar tela
 
+
+
 function mostrarResultado(produto){
     resul.innerHTML += `
     Seu Carrinho \u{1F6D2} <br>
-
     Cliente : ${produto.cliente} <br>
     Produto : ${produto.produto} <br>
     Desconto : ${produto.desconto.resultado} <br>
