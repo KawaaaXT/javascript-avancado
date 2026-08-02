@@ -1,0 +1,49 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cyan;
+}
+
+main{
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+    width: 850px;
+    border-radius: 2px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.844)
+};
+
+#blackAzul{
+    background-color: rgba(0, 109, 136, 0.774);
+}
+
+#red{
+    background-color: rgba(243, 54, 54, 0.724);
+}
+
+#pink{
+    background-color: rgb(255, 173, 187);
+}
+
+#azul{
+    background-color: rgba(0, 0, 255, 0.749);
+}
+
+#green{
+    background-color: rgb(78, 236, 183);
+}
+
+#brown{
+    background-color: rgba(189, 42, 42, 0.812);
+}
+
+#yellow{
+    background-color: rgba(184, 248, 57, 0.765);
+}
