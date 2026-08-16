@@ -1,5 +1,5 @@
 
-
+/*
 const funcionarios = [
     {nome: "Carlos", salario: 1200},
     {nome: "Larissa", salario: 2300},
@@ -26,7 +26,7 @@ console.log(`Funcionarios que recebem Mais de 2000: ${quantidade}`)
 console.log(`Total Gasto Com Salairos : ${totalSalarios}`)
 console.log(`O Maior Salario é de : ${nomeMaiorSalario} que é : ${maiorSalario}`)
 
-
+/*
 
 
 
