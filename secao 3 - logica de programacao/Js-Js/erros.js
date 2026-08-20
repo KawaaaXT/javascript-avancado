@@ -24,4 +24,4 @@ try{
     console.log(erro.name)
 }
 
-console.log(verificadorIdade("Kawaaa"))
+console.log(verificadorIdade(""))
