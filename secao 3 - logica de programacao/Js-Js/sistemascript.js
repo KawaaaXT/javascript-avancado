@@ -1,4 +1,6 @@
 
+
+
 // Seleção dos elementos
 
 const nomeProduto = document.querySelector('#produto')
