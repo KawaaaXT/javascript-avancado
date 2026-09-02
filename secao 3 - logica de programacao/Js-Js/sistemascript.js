@@ -23,29 +23,30 @@ function iniciar(evento){
         return false
     };
 
-    const guardarTotal = calcularTotal(
-        Number(preco.value),
-        Number(quantidadeProduto.value)
+    const Total = calcularTotal(
+      Number(preco.value),
+      Number(quantidadeProduto.value)
     )
+    console.log(Total)
 
      const produto = criaProdutos(
         nomeProduto.value,
         Number(preco.value),
         Number(quantidadeProduto.value),
-        guardarTotal
+        Total
      )
     produtos.push(produto)
     mostrarCarrinho(produto)
     limparTela()
 
-}; // fim da funcao principal
+} // fim da funcao principal
+-
 
-
-// funcao calcularTotal
 function calcularTotal (preco , quantidade){
     const total = preco * quantidade
     return total
-}; // fim da funcao calcular
+}
+
 
 
 // funcao removerProduto
