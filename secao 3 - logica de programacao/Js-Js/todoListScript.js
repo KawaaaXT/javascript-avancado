@@ -45,8 +45,10 @@ const adicionar = e => {
         tarefa.focus()
 
         salvarTarefas()
-
 }
+
+
+
 // Função Salvar Tarefas !
 const salvarTarefas = () => {
     const saveTarefas = ul.querySelectorAll("li")
@@ -66,7 +68,7 @@ const salvarTarefas = () => {
 // funcao adicionando Tarefas Salvas
 const adicionarTarefasSalvas = () => {
     const tarefas = localStorage.getItem('ul')
-    const listaDeTarefas = JSON.parse(tarefas)
+    const listaDeTarefas = JSON.parse(tarefas) 
 
     for (let tarefa of listaDeTarefas){
         const li = document.createElement('li')
@@ -91,5 +93,4 @@ tarefa.addEventListener("keypress", (e) => {
 
 
 form.addEventListener("submit", adicionar)
-
 

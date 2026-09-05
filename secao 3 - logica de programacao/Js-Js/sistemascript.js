@@ -42,7 +42,7 @@ function iniciar(evento){
 // funcao calcularTotal
 function calcularTotal (preco , quantidade){
     const total = preco * quantidade
-    return total
+    return total 
 }; // fim da funcao calcular
 
 
@@ -54,7 +54,7 @@ function removerProduto (nomeProduto){
         console.log('Produto Não Encontrado \u{1F6AB}')
         return
     }
-    produtos.splice(produtoEncontrado, 1)
+    produtos.splice(produtoEncontrado, 1) 
     console.log(' Produto Removido com sucesso')
 }; // Fim Da Funcao Remover Produto
 
