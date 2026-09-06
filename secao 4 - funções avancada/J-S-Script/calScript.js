@@ -14,7 +14,6 @@ function criarCalculadora () {
 
             this.display.innerText = resultado
                    
-      
          },
 
          subtrair (){
@@ -93,7 +92,6 @@ function criarCalculadora () {
             }
 
             this.display.innerText += valor.replace(",", ".")
-
          }
 
        };
@@ -102,6 +100,6 @@ function criarCalculadora () {
 
 const calculadora = criarCalculadora()
 calculadora.cliqueBotoes()
-calculadora.cleanDisplay()
+
 
 
