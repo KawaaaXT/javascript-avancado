@@ -32,9 +32,10 @@ function iniciar(evento){
         altura,
         imc,
         validar.nivel
+
     ) 
     pacientes.push(paciente)
-    mostrarResultado(paciente,)
+    mostrarResultado(paciente)
     limparTela()
     console.log(paciente)
 
