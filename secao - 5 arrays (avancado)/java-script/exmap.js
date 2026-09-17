@@ -1,5 +1,5 @@
 
-/*
+
 const numeros = [10, 20, 9, 8, 40, 50, 100]
 
 const triplicados = numeros.map(numero => numero * 3)
@@ -27,7 +27,7 @@ const novoArray = produtos.map(produto => {
 })
 
 console.log(novoArray)
-*/
+
 
 
 

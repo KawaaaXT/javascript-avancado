@@ -21,7 +21,7 @@ const resultado = numeros.filter((valor, indice, array) => {
     return valor > 10})
 
 console.log(resultado)
-*/
+
 
 
 const pessoas = [
@@ -44,14 +44,14 @@ console.log(pessoasQueTerminaoNomeComa)
 
 
 
-/*
+
 const idadeAvancada = pessoas.filter(idavancada => idavancada.idade >= 50)
 console.log(idadeAvancada)
 
 
 
 const pessoasComNomeGrande = pessoas.filter(valor => valor.nome.length >= 5 )
-/*  
+
 
 
 console.log(pessoasComNomeGrande)
@@ -62,7 +62,7 @@ console.log(pessoasComNomeGrande)
 
 
 
-/*
+
 const resultado = pessoas.filter(humanos => humanos.idade >= 18)
 console.log(resultado)
 */
