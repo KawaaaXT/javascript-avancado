@@ -56,7 +56,6 @@ funcionarios.forEach((funcionario, indice) => {
     }
 
 
-
     if(funcionario.salario >= 1500){
         total++
         console.log(`O total de funcionario que recebem 1500 ou mais é : ${total} ` )

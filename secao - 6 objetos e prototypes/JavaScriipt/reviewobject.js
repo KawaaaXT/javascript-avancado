@@ -84,6 +84,8 @@ function Pessoa (nome, idade) {
     
     this.idade = idade;
 
+        Object.freeze(this)
+
    
 }
 
