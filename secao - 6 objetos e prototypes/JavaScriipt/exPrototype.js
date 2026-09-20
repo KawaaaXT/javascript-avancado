@@ -57,7 +57,7 @@ console.log(cachorro.nome)
 console.log(cachorro.vivo)
 console.log(cachorro.respirar())
 
-*/
+
 
 
 
@@ -78,7 +78,7 @@ Object.setPrototypeOf(programador, funcionario) // Defina o objeto `funcionario`
       /*                ↑             ↑
                    objeto que      prototype
                      recebe                         */   
-
+/*
 console.log(programador.nome)
 console.log(programador.linguagem)
 console.log(programador.empresa)
@@ -86,3 +86,4 @@ programador.apresentarEmpresa()
 
 console.log(Object.getPrototypeOf(programador) === funcionario)
 console.log(Object.hasOwn(programador, 'empresa'))
+*/
