@@ -48,7 +48,10 @@ const cachorro = {
     nome: 'Thor'
 };
 
-Object.setPrototypeOf(cachorro, animal)
+Object.setPrototypeOf(cachorro, animal) // Defina o objeto `animal` como prototype do objeto `cachorro`
+                       ↑           ↑
+                   objeto que   prototype
+                     recebe     
 
 console.log(cachorro.nome)
 console.log(cachorro.vivo)
@@ -71,7 +74,10 @@ const programador = {
     linguagem: "JavaScript"
 };
 
-Object.setPrototypeOf(programador, funcionario)
+Object.setPrototypeOf(programador, funcionario) // Defina o objeto `funcionario` como prototype do objeto `programador`
+      /*                ↑             ↑
+                   objeto que      prototype
+                     recebe                         */   
 
 console.log(programador.nome)
 console.log(programador.linguagem)
