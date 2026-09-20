@@ -69,7 +69,7 @@ delete funcionario1.id
 
 console.log(funcionario1)
 
-*/
+
 
  // Functionn Construtora 
 function Produto (nome, valor, quantidade) {
@@ -95,3 +95,5 @@ console.log(produto1.valorEstoque)
 produto1.valor = 1200
 
 console.log(produto1.valorEstoque)
+
+*/

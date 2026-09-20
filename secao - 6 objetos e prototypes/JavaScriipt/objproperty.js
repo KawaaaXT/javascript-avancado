@@ -1,5 +1,5 @@
 
-
+/*
 function Produto (nome, valor, estoque) {
     this.nome = nome;
 
@@ -54,3 +54,84 @@ function Produto (nome, valor, estoque) {
 const produto1 = new Produto ("Iphone 17", 1500,  4)
 
 console.log(produto1)
+
+
+
+
+function Produto (nome, valor, quantidade){
+    this.nome = nome;
+
+    this.valor = valor;
+
+    this.quantidade = quantidade
+
+    Object.defineProperty(this, 'valorEstoque', {
+        get () {
+            return this.valor * this.quantidade
+        },
+        enumerable: true,
+        configurable: true
+    })
+};
+
+const produto1 = new Produto('Sapato', 150, 6)
+
+console.log(produto1.valorEstoque)
+
+
+
+
+function Produto (nome, preco, estoque){
+    this.nome = nome;
+
+    this.preco = preco;
+
+    let estoquePrivado = estoque
+
+   
+
+    Object.defineProperty(this, 'estoque', {
+
+        get () {
+            return estoquePrivado
+        }, 
+
+        set(valor) {
+            if (typeof valor !== 'number') {
+                console.log("Damn [ERRO]")
+                return
+            }
+            estoquePrivado = valor
+
+        }
+  
+    })
+
+}
+
+const produto1 = new Produto ('Camisa', 15, 3)
+
+produto1.estoque = 9
+console.log(produto1.estoque)
+
+*/
+
+
+function criarPoduto (nome) {
+    return{
+        get nome() {
+            return nome;
+        },
+
+        set nome(valor) {
+            valor  = valor.replace('Coisa', '')
+            nome = valor
+        }
+    }
+}
+
+const produto1 = criarPoduto('Telefone')
+
+produto1.nome = "Qualquer Coisa"
+
+console.log(produto1.nome)
