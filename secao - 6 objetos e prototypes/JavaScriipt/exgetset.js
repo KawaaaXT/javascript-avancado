@@ -99,7 +99,7 @@ function Produto (nome, preco, quantidade) {
             },
 
             set(valor) {
-           valor >= 0 ? this._preco = valor : "Preço Invalido"
+             valor >= 0 ? this._preco = valor : "Preço Invalido"
             return
 
             }
