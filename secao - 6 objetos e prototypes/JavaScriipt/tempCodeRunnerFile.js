@@ -1,25 +1,23 @@
 
+const produtoBase = {
+    categoria: "Informatica",
+    disponivel: true
+}
 
-function Produto (nome, valor, quantidade) {
-    this.nome = nome;
+const dadosProduto = {
+    nome: "Teclado",
+    preco: 80,
+    quantidade: 5
+}
 
-    this.valro = valor;
 
-    this.quantidade = quantidade
+const produtoCompleto = Object.assign({}, produtoBase, dadosProduto )
+const  {nome, preco, quantidade, ...outrosDados} = produtoCompleto
+let total = preco * quantidade
 
-    Object.defineProperty(this, 'valorEstoque', {
-        get () {
-            return this.valor * this.quantidade
-        },
-        enumerable: true,
-        configurable: false
-    })
-};
-
-const produto1 = new Produto ("Sapato nike", 1000, 2)
-
-console.log(produto1.valorEstoque)
-
-produto1.valor = 1200
-
-console.log(produto1.valorEstoque)
+console.log(nome)
+console.log(preco)
+console.log(quantidade)
+console.log(total)
+console.log(outrosDados)
+console.log(Object.getOwnPropertyDescriptor(produtoCompleto, 'preco'))
