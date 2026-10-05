@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestão de Funcionários 2.0</title>
+
+    <link rel="stylesheet" href="../estyle/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <span class="subtitle">Sistema empresarial</span>
+                <h1>Gestão de Funcionários 2.0</h1>
+                <p>Cadastre, pesquise e gerencie os funcionários da empresa.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- CADASTRO -->
+        <section class="card">
+            <div class="section-title">
+                <div>
+                    <span class="subtitle">Funcionários</span>
+                    <h2>Cadastrar funcionário</h2>
+                </div>
+            </div>
+
+            <form id="form-official">
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label for="name">Nome</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Ex: Kauã"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="age">Idade</label>
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Ex: 21"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mail">E-mail</label>
+                        <input
+                            type="email"
+                            id="mail"
+                            placeholder="Ex: kaua@email.com"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Digite uma senha"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="position">Cargo</label>
+                        <input
+                            type="text"
+                            id="position"
+                            placeholder="Ex: Programador"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="salary">Salário</label>
+                        <input
+                            type="number"
+                            id="salary"
+                            placeholder="Ex: 1500"
+                            step="0.01"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="code">Código</label>
+                        <input
+                            type="text"
+                            id="code"
+                            placeholder="Ex: FUN-101"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Cadastrar funcionário
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- RESUMO -->
+        <section class="dashboard">
+
+            <article class="stat-card">
+                <span>Total de funcionários</span>
+                <strong id="total-employees">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Folha salarial</span>
+                <strong id="total-salary">€ 0,00</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Média salarial</span>
+                <strong id="average-salary">€ 0,00</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Maior salário</span>
+                <strong id="highest-salary">€ 0,00</strong>
+            </article>
+
+        </section>
+
+
+        <!-- PESQUISA -->
+        <section class="card">
+
+            <div class="section-title">
+                <div>
+                    <span class="subtitle">Pesquisa</span>
+                    <h2>Buscar funcionário</h2>
+                </div>
+            </div>
+
+            <div class="actions-grid">
+
+                <div class="action-box">
+
+                    <label for="search-code">
+                        Buscar por código
+                    </label>
+
+                    <div class="action-input">
+                        <input
+                            type="text"
+                            id="search-code"
+                            placeholder="Ex: FUN-101"
+                        >
+
+                        <button
+                            type="button"
+                            id="btn-search"
+                            class="btn btn-primary"
+                        >
+                            Buscar
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="action-box">
+
+                    <label for="filter-position">
+                        Filtrar por cargo
+                    </label>
+
+                    <div class="action-input">
+
+                        <input
+                            type="text"
+                            id="filter-position"
+                            placeholder="Ex: Programador"
+                        >
+
+                        <button
+                            type="button"
+                            id="btn-filter"
+                            class="btn btn-secondary"
+                        >
+                            Filtrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                id="btn-show-all"
+                class="btn btn-outline"
+            >
+                Mostrar todos
+            </button>
+
+        </section>
+
+
+        <!-- AUMENTO SALARIAL -->
+        <section class="card">
+
+            <div class="section-title">
+                <div>
+                    <span class="subtitle">Salários</span>
+                    <h2>Aumento salarial</h2>
+                </div>
+            </div>
+
+            <div class="salary-increase">
+
+                <div class="input-group">
+                    <label for="increase-position">
+                        Cargo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="increase-position"
+                        placeholder="Ex: Programador"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="percentage">
+                        Porcentagem
+                    </label>
+
+                    <input
+                        type="number"
+                        id="percentage"
+                        placeholder="Ex: 10"
+                        min="0"
+                    >
+                </div>
+
+                <button
+                    type="button"
+                    id="btn-increase"
+                    class="btn btn-success"
+                >
+                    Aplicar aumento
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTA -->
+        <section class="card">
+
+            <div class="section-title list-header">
+
+                <div>
+                    <span class="subtitle">Equipe</span>
+                    <h2>Funcionários</h2>
+                </div>
+
+                <span
+                    id="list-count"
+                    class="badge"
+                >
+                    0 funcionários
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>E-mail</th>
+                            <th>Cargo</th>
+                            <th>Salário</th>
+                            <th>Código</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="official-list">
+
+                        <tr class="empty-row">
+                            <td colspan="7">
+                                Nenhum funcionário cadastrado.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO DA BUSCA -->
+        <section
+            class="card search-result"
+            id="search-result"
+        >
+
+            <div class="section-title">
+                <div>
+                    <span class="subtitle">Resultado</span>
+                    <h2>Funcionário encontrado</h2>
+                </div>
+            </div>
+
+            <div id="result-content">
+                <p class="empty-message">
+                    Faça uma pesquisa para visualizar um funcionário.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>Gestão de Funcionários 2.0</p>
+    </footer>
+
+
+    <script src="../gestaofuncionario2.js"></script>
+
+</body>
+</html>

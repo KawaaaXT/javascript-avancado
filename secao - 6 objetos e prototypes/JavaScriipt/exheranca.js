@@ -40,7 +40,7 @@ const funcionario1 = new Funcionario(
     20,
     "Programador",
     1800
-)+
+)
 
 
 
