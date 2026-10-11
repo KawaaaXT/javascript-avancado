@@ -129,7 +129,9 @@ new Chart(grafico, {
               '#3b82f6', // Transporte
               '#8b5cf6', // Lazer
               '#64748b'  // Outros
-              ]
+              ],
+
+              
         }]
     },
 
