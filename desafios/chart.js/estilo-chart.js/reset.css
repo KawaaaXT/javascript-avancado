@@ -1,0 +1,28 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+main {
+    flex: 1;
+    padding-top: 32px;
+    padding-bottom: 40px;
+}

@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard para acompanhar as vendas mensais de uma loja.">
+
+    <title>Dashboard de Vendas</title>
+
+    <link rel="stylesheet" href="../estilo-chart.js/style.css">
+
+    <!-- Biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript do projeto -->
+    <script src="../script-chart.js/dashbord.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <h1>Dashboard de Vendas</h1>
+            <p>Acompanha o desempenho das vendas da loja.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="resumo">
+            <article class="cartao">
+                <h2>Total de vendas</h2>
+                <p id="total-vendas" class="valor">0 €</p>
+            </article>
+
+            <article class="cartao">
+                <h2>Melhor mês</h2>
+                <p id="melhor-mes" class="valor">--</p>
+            </article>
+
+            <article class="cartao">
+                <h2>Número de meses</h2>
+                <p id="numero-meses" class="valor">0</p>
+            </article>
+        </section>
+
+        <section class="graficos">
+
+            <article class="cartao grafico-principal">
+                <h2>Monthly Sales</h2>
+                <p class="descricao">
+                    Compara o valor das vendas ao longo dos meses.
+                </p>
+
+                <div class="area-grafico">
+                    <canvas id="grafico-vendas"></canvas>
+                </div>
+            </article>
+
+            <article class="cartao grafico-secundario">
+                <h2>Sales by Month</h2>
+                <p class="descricao">
+                    Visualiza a participação de cada mês nas vendas.
+                </p>
+
+                <div class="area-grafico">
+                    <canvas id="grafico-distribuicao"></canvas>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Dashboard de Vendas &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

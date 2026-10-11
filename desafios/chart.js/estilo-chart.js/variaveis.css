@@ -1,0 +1,17 @@
+
+:root {
+    --cor-fundo: #f1f5f9;
+    --cor-cartao: #ffffff;
+
+    --cor-primaria: #2563eb;
+    --cor-primaria-escura: #1d4ed8;
+
+    --cor-texto: #0f172a;
+    --cor-texto-secundario: #64748b;
+    --cor-borda: #e2e8f0;
+
+    --sombra-cartao: 0 4px 16px rgba(15, 23, 42, 0.06);
+
+    --raio-cartao: 14px;
+    --espacamento: 24px;
+}

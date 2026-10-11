@@ -1,0 +1,35 @@
+
+
+@media (max-width: 768px) {
+    .resumo {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .graficos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.5rem;
+    }
+
+    .cartao {
+        padding: 20px;
+    }
+
+    .area-grafico {
+        height: 280px;
+    }
+}
+
+@media (max-width: 400px) {
+    .valor {
+        font-size: 1.4rem;
+    }
+
+    .area-grafico {
+        height: 240px;
+    }
+}
