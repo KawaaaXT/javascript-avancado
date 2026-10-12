@@ -22,19 +22,39 @@ class Dashbord {
     totalDeVendas () {
         return this.vendas.reduce((acumulador, valor) => {
             return acumulador + valor.valor
-        })
+        }, 0)
     }
 
     bestMonth () {
-        const maiorValor = this.vendas.valor
-        const nomeMes = this.vendas.mes
-        
+        let maiorValor = 0
+        let nomeMes 
+         this.vendas.forEach(venda => {
+            if(venda.valor > maiorValor) {
+                maiorValor = venda.valor
+                nomeMes = venda.mes
+            }
+        })
+        return nomeMes
+    }
+
+    numeroDeMonths () {
+        return this.vendas.length
     }
 
     
 }
 
-new Chart(graficoVendas, {
+const dashbord = new Dashbord (vendas) // Instância da minha class Dashbord e passei vendas , pois vendas é o meu array que contem o meu objeto
+const formatadorMoeda = new Intl.NumberFormat("pt-PT", { // Formatando Moeda
+    style: "currency",
+    currency: "EUR"
+})
+totalVendas.innerText = formatadorMoeda.format(dashbord.totalDeVendas())
+melhorMes.innerText = dashbord.bestMonth()
+numeroDeMeses.innerText = dashbord.numeroDeMonths()
+
+
+new Chart(graficoVendas, { // Grafico De Barras
     type: 'bar',
     data:{
         labels: vendas.map(venda => venda.mes),
@@ -65,7 +85,7 @@ new Chart(graficoVendas, {
                 'rgb(0, 214, 121)',// Abril
                 'rgb(218, 1, 45)', // Maio
                 'rgb(209, 164, 0)' // Junho
-            ], // cor das barras quando passas o rato por cima.
+            ], // cor das barras quando passar o rato por cima.
             categoryPercentage: 0.8,
             barPercentage: 0.5
         }]
@@ -76,7 +96,7 @@ new Chart(graficoVendas, {
         maintainAspectRatio: false, // usa a altura definida pela div
         scales: {
             y: {
-                beginAtZero: true,
+                beginAtZero: true, // meu eixo y ira comecar no 0
             }
 
         },
