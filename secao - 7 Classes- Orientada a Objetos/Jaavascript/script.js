@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+/*
 
 
 class Funcionario {
@@ -97,6 +97,9 @@ console.log(produto1)
 
 
 */
+
+
+/*
 class ContaBancaria {
     constructor(titular,saldo) {
         this.titular = titular;
@@ -143,8 +146,7 @@ conta2.verDados()
 console.log(conta)
 console.log(conta2)
 
-*/
-=======
+
 class DispostivoEletronico {
     constructor(nome){
         this.nome = nome;
@@ -192,4 +194,4 @@ class Tablet extends DispostivoEletronico {
 
 
 const t1 = new Tablet ("IPAD", true)
->>>>>>> fe8f88c1ef6a4be47620b7ce88b4659165ac6d50
+*/
