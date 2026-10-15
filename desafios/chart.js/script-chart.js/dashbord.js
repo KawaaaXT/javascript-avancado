@@ -26,8 +26,11 @@ class Dashbord {
     }
 
     bestMonth () {
-        const maiorValor = this.vendas.valor
-        const nomeMes = this.vendas.mes
+        let maiorValor = 0
+        let nomeMes
+        return this.vendas.forEach(venda => {
+            
+        })
         
     }
 
