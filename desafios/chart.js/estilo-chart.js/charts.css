@@ -1,0 +1,200 @@
+
+.panel {
+  min-width: 0;
+  padding: 17px 18px 12px;
+}
+
+.panel-wide {
+  grid-column: span 1;
+}
+
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel-header h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 620;
+}
+
+.panel-header p {
+  margin: 4px 0 0;
+  color: var(--color-text);
+  font-size: 11px;
+}
+
+.select-button {
+  display: inline-flex;
+  height: 29px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.select-button:hover {
+  border-color: #39465a;
+  background: var(--color-surface-raised);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 14px;
+  color: var(--color-text-secondary);
+  font-size: 9px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.dot-primary { background: var(--color-primary); }
+.dot-secondary { background: var(--color-blue); }
+.dot-tertiary { background: var(--color-green); }
+
+.chart-area {
+  display: grid;
+  height: 190px;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.chart-area-tall {
+  height: 210px;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  color: var(--color-text-muted);
+  font-size: 8px;
+  text-align: right;
+}
+
+.chart-stage {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  padding-bottom: 21px;
+}
+
+.grid-lines {
+  position: absolute;
+  inset: 2px 0 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+
+.chart-stage canvas {
+  position: absolute;
+  inset: 2px 0 21px;
+  width: 100%;
+  height: calc(100% - 23px);
+}
+
+.x-axis {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-muted);
+  font-size: 8px;
+}
+
+.chart-hint {
+  margin-top: 4px;
+  padding-top: 9px;
+  border-top: 1px solid var(--color-border-soft);
+  color: var(--color-text-muted);
+  font-size: 9px;
+}
+
+.donut-content {
+  display: flex;
+  min-height: 185px;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 10px 0 4px;
+}
+
+.donut-wrap {
+  position: relative;
+  width: 450px;
+  height: 500px;
+  flex: 0 0 auto;
+}
+
+.donut-wrap canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.donut-center strong {
+  font-size: 15px;
+}
+
+.donut-center span {
+  color: var(--color-text-muted);
+  font-size: 9px;
+}
+
+.donut-legend {
+  display: grid;
+  width: min(100%, 200px);
+  gap: 12px;
+}
+
+.donut-legend > div {
+  display: grid;
+  grid-template-columns: 9px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.radar-area {
+  display: grid;
+  height: 500px;
+  place-items: center;
+  margin: 5px auto 0;
+}
+
+.radar-area canvas {
+  width: 100%;
+  height: 100%;
+}

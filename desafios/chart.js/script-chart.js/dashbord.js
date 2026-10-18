@@ -27,22 +27,24 @@ class Dashbord {
 
     bestMonth () {
         let maiorValor = 0
-        let nomeMes 
-         this.vendas.forEach(venda => {
+        let nomeMes
+           this.vendas.forEach(venda => {
             if(venda.valor > maiorValor) {
                 maiorValor = venda.valor
                 nomeMes = venda.mes
             }
         })
         return nomeMes
-    }
+            
+        }
+        
 
     numeroDeMonths () {
         return this.vendas.length
     }
 
-    
-}
+ }
+
 
 const dashbord = new Dashbord (vendas) // Instância da minha class Dashbord e passei vendas , pois vendas é o meu array que contem o meu objeto
 const formatadorMoeda = new Intl.NumberFormat("pt-PT", { // Formatando Moeda
