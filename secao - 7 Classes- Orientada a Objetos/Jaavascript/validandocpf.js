@@ -21,10 +21,10 @@ class Cpf {
 
     validarPrimeiroDigito(){
         const cpfBase = Array.from(this.cpfLimpo.slice(0, 9)); // Transformando meu cpfLimpo em um array 
-        let regressivo = cpfBase.length + 1 // Obetendo peso pois o meu cpfBase Começa com 9 entao so acrescentei o ( + 1) para Obter o peso certo 
+        let peso = cpfBase.length + 1 // Obetendo peso pois o meu cpfBase Começa com 9 entao so acrescentei o ( + 1) para Obter o peso certo 
         const somaMultiplicacoes = cpfBase.reduce((acumulador, valor) => {
-            acumulador += (regressivo * Number(valor))
-            regressivo--
+            acumulador += (peso * Number(valor))
+            peso--
             return acumulador
         }, 0)
 
@@ -42,10 +42,10 @@ class Cpf {
 
     validarSegundoDigito () {
         const cpfBase = Array.from(this.cpfLimpo.slice(0, 10)) // Obétemos os primeiros 10 digitos e transformamos em array 
-        let regressivo = cpfBase.length + 1 // Obetendo peso pois o meu cpfBase Começa com 10 entao so acrescentei o ( + 1) para Obter o peso certo 
+        let peso = cpfBase.length + 1 // Obetendo peso pois o meu cpfBase Começa com 10 entao so acrescentei o ( + 1) para Obter o peso certo 
         const total = cpfBase.reduce((acumulador, valor) => { 
-            acumulador += (regressivo * Number(valor)) 
-            regressivo--
+            acumulador += (peso * Number(valor)) 
+            peso--
             return acumulador
         }, 0)
 
@@ -62,6 +62,7 @@ class Cpf {
     }
 
 
-const cpfValido = new Cpf ('529.982.247-25')
+const cpfValido = new Cpf ('111.111.111-11')
+
 console.log(cpfValido.validarPrimeiroDigito())
 console.log(cpfValido.validarSegundoDigito())
