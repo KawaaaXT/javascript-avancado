@@ -1,0 +1,171 @@
+@media (min-width: 1500px) {
+  .page-content {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .chart-grid,
+  .kpi-grid {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 1180px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+
+  .topbar {
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+
+  .page-content {
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chart-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --sidebar-width: 68px;
+    --topbar-height: 62px;
+  }
+
+  .sidebar {
+    align-items: center;
+    padding: 20px 9px 13px;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .brand-name,
+  .workspace-label,
+  .nav-item span,
+  .profile-copy,
+  .more-button {
+    display: none;
+  }
+
+  .nav-list {
+    width: 100%;
+    gap: 8px;
+    margin-top: 34px;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar-bottom {
+    width: 100%;
+  }
+
+  .sidebar-profile {
+    justify-content: center;
+    padding: 12px 0 0;
+  }
+
+  .topbar {
+    padding: 0 18px;
+  }
+
+  .topbar-actions {
+    gap: 12px;
+  }
+
+  .search-box {
+    width: 34px;
+    justify-content: center;
+    padding: 0;
+    border-color: transparent;
+    background: transparent;
+  }
+
+  .search-box input,
+  .search-box kbd,
+  .user-name {
+    display: none;
+  }
+
+  .page-content {
+    padding: 26px 18px 16px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .heading-actions {
+    width: 100%;
+  }
+
+  .heading-actions .button-primary {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .kpi-grid {
+    gap: 9px;
+  }
+
+  .kpi-card {
+    min-height: 132px;
+    padding: 13px 12px 10px;
+  }
+
+  .kpi-value {
+    font-size: 20px;
+  }
+
+  .panel {
+    padding: 14px 12px 10px;
+  }
+
+  .chart-area {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .donut-content {
+    gap: 10px;
+  }
+
+  .donut-wrap {
+    width: 118px;
+    height: 118px;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

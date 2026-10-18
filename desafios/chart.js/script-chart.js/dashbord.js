@@ -28,7 +28,6 @@ class Dashbord {
     bestMonth () {
         let maiorValor = 0
         let nomeMes
-
            this.vendas.forEach(venda => {
             if(venda.valor > maiorValor) {
                 maiorValor = venda.valor
@@ -42,8 +41,6 @@ class Dashbord {
 
     numeroDeMonths () {
         return this.vendas.length
-
-
     }
 
  }

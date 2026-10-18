@@ -1,0 +1,256 @@
+
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="description" content="Painel de vendas com indicadores e gráficos interativos.">
+  <title>Visão geral · Compra Dash </title>
+  <link rel="stylesheet" href="../estilo-chart.js/estyle.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Lumina Analytics, início">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="brand-name">Compra<span>Dash</span></span>
+      </a>
+
+      <div class="workspace-label">ESPAÇO DE TRABALHO</div>
+
+      <nav class="nav-list">
+        <a class="nav-item is-active" href="#inicio" aria-current="page">
+          <span>▦</span><span>Visão geral</span>
+        </a>
+        <a class="nav-item" href="#vendas">
+          <span>↗</span><span>Vendas</span>
+        </a>
+        <a class="nav-item" href="#produtos">
+          <span>◇</span><span>Produtos</span>
+        </a>
+        <a class="nav-item" href="#clientes">
+          <span>♧</span><span>Clientes</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a class="nav-item" href="#ajuda">
+          <span>ⓘ</span><span>Central de ajuda</span>
+        </a>
+
+        <div class="sidebar-profile">
+          <div class="avatar">HF</div>
+          <div class="profile-copy">
+            <strong>Hugo Fernandes</strong>
+            <span>Plano profissional</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="inicio">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <span>Relatórios</span>
+          <span>/</span>
+          <strong>Visão geral</strong>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Buscar..." aria-label="Buscar">
+            <kbd>⌘ K</kbd>
+          </label>
+
+          <button class="icon-button" type="button" aria-label="Notificações">♧</button>
+          <div class="avatar">HF</div>
+          <span class="user-name">Hugo Fernandes</span>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="page-heading">
+          <div>
+            <div class="eyebrow">● PAINEL DE DESEMPENHO</div>
+            <h1>Visão geral</h1>
+            <p>Acompanhe o desempenho do seu negócio em um só lugar.</p>
+          </div>
+
+          <div class="heading-actions">
+            <button class="button button-secondary" type="button">↓ Exportar</button>
+            <button class="button button-primary" type="button">＋ Adicionar relatório</button>
+          </div>
+        </section>
+
+        <section class="kpi-grid" aria-label="Indicadores principais">
+          <article class="kpi-card">
+            <div class="kpi-topline"><span>Receita total</span><span>€</span></div>
+            <div class="kpi-value"> € 48.294,00</div>
+            <div class="kpi-foot"><strong>↗ 12,8%</strong><span>vs. mês anterior</span></div>
+          </article>
+
+          <article class="kpi-card">
+            <div class="kpi-topline"><span>Pedidos</span><span>🛒</span></div>
+            <div class="kpi-value">1.284</div>
+            <div class="kpi-foot"><strong>↗ 8,2%</strong><span>vs. mês anterior</span></div>
+          </article>
+
+          <article class="kpi-card">
+            <div class="kpi-topline"><span>Ticket médio</span><span>◎</span></div>
+            <div class="kpi-value"> € 376,12</div>
+            <div class="kpi-foot"><strong>↘ 2,4%</strong><span>vs. mês anterior</span></div>
+          </article>
+
+          <article class="kpi-card">
+            <div class="kpi-topline"><span>Clientes ativos</span><span>♧</span></div>
+            <div class="kpi-value">3.642</div>
+            <div class="kpi-foot"><strong>↗ 14,6%</strong><span>vs. mês anterior</span></div>
+          </article>
+        </section>
+
+        <section class="chart-grid" aria-label="Gráficos de vendas">
+          <!-- Gráfico de barras -->
+          <article class="panel panel-wide" id="vendas">
+            <div class="panel-header">
+              <div>
+                  <h2>Vendas Por Categoria</h2>
+                <p>Receita e pedidos ao longo do tempo</p>
+              
+              </div>
+              <button class="select-button" type="button">Últimos 12 meses⌄</button>
+            </div>
+
+            <div class="legend">
+            </div>
+
+            <div class="chart-area chart-area-tall">
+              <div class="y-axis">
+               
+              </div>
+
+              <div class="chart-stage">
+                <div class="grid-lines" aria-hidden="true">
+                   
+                </div>
+
+                <canvas id="grafico-barra" aria-label="Gráfico de barras: receita e pedidos por mês"  ></canvas>
+
+                <div class="x-axis">
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-hint">Compra Dash</div>
+          </article>
+
+          <!-- Gráfico de linhas -->
+          <article class="panel" id="produtos">
+            <div class="panel-header">
+              <div>
+                <h2>Receita ao longo do tempo</h2>
+                <p>Comparativo de desempenho mensal</p>
+              </div>
+            </div>
+
+            <div class="legend">
+             
+            </div>
+
+            <div class="chart-area">
+              <div class="y-axis">
+               
+              </div>
+
+              <div class="chart-stage">
+                <div class="grid-lines" aria-hidden="true">
+                  
+                </div>
+
+                <canvas id="grafico-linha" aria-label="Gráfico de linhas: receita mensal"></canvas>
+
+                <div class="x-axis">
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-hint">Canvas pronto para o gráfico de linhas.</div>
+          </article>
+
+          <!-- Gráfico de rosca -->
+          <article class="panel" id="clientes">
+            <div class="panel-header">
+              <div>
+                <h2>Distribuição da Receita Mensal</h2>
+                <p>Visualize a contribuição de cada Mês para a receita total anual e identifique os meses com maior participação nas vendas</p>
+              </div>
+            </div>
+
+            <div class="donut-content">
+              <div class="donut-wrap">
+                <canvas
+                  id="grafico-rosca"
+                  aria-label="Gráfico de rosca: vendas por categoria"
+                ></canvas>
+                <div class="donut-center">
+                  <strong id="receita-total"> € 48,3k</strong>
+                  <span>Receita total</span>
+                </div>
+              </div>
+
+              <div class="donut-legend">
+                <div><i></i><span>Eletrônicos</span><strong id="total-eletronicos">42%</strong></div>
+                <div><i></i><span>Casa &amp; decoração</span><strong id="total-casa">28%</strong></div>
+                <div><i></i><span>Moda</span><strong id="total-moda">18%</strong></div>
+                <div><i></i><span>Outros</span><strong id="total-outros">12%</strong></div>
+              </div>
+            </div>
+
+            <div class="chart-hint">CompraDash</div>
+          </article>
+
+          <!-- Gráfico radar -->
+          <article class="panel panel-wide">
+            <div class="panel-header">
+              <div>
+                <h2>Desempenho Trismestral</h2>
+                <p>Analise e compare o desempnho das receitas e dos pedidos ao longo dos quators trimestres, identificando os periodos com melhores resultados</p>
+              </div>
+              <button class="select-button" type="button">Este mês⌄</button>
+            </div>
+
+            <div class="legend">
+              <span>● Receita</span>
+              <span>● Conversão</span>
+              <span>● Retenção</span>
+            </div>
+
+            <div class="radar-area">
+              <canvas
+                id="grafico-radar"
+                aria-label="Gráfico radar: desempenho por canal"
+              ></canvas>
+            </div>
+
+            <div class="chart-hint">CompraDash</div>
+          </article>
+        </section>
+
+        <footer class="page-footer">
+          <span>© 2025 CompraDash</span>
+          <span>Dados atualizados há 5 minutos</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Carrega a biblioteca Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../script-chart.js/dashbord2.0.js"></script>
+</body>
+</html>
