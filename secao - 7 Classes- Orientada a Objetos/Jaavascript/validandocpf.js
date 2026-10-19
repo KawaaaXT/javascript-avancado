@@ -62,6 +62,5 @@ class Cpf {
     }
 
 
-const cpfValido = new Cpf ('529.982.247-25')
-console.log(cpfValido.validarPrimeiroDigito())
-console.log(cpfValido.validarSegundoDigito())
+
+

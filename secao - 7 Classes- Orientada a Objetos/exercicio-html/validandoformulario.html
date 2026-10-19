@@ -1,0 +1,75 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="../estyle - css/formulario.css">
+    <script src="../Jaavascript/validandocpf.js"></script>
+    <script src="../Jaavascript/formulario.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <form id="formulario" class="formulario">
+            <h1>Criar Conta</h1>
+            <p>Preenche os campos para te registares.</p>
+
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input
+                    type="text"
+                    class="nome validar"
+                    
+                    name="nome"
+                    placeholder="Digite o seu nome"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="cpf">CPF</label>
+                <input
+                    type="text"
+                    
+                    class="cpf validar"
+                    name="cpf"
+                    
+                    placeholder="Digite o seu CPF"
+                    maxlength="14"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="idade">Idade</label>
+                <input
+                    type="number"
+                    
+                    class= "idade validar"
+                    name="idade"
+                   
+                    placeholder="Digite a sua idade"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    class="senha validar"
+                    name="senha"
+                    placeholder="Digite a sua senha"
+                >
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+            <p id="mensagem" aria-live="polite"></p>
+        </form>
+    </main>
+
+</body>
+</html>
+
