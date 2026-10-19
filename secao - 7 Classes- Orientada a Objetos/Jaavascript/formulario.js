@@ -19,6 +19,11 @@ class ValidarFormulario {
             console.log('Iniciando....')
 
             const campValidado = this.camposValidados()
+            
+
+            if(campValidado && this.validaSenha()) {
+                this.formulario.submit()
+            }
 
     }
 
