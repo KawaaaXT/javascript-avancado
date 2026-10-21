@@ -20,7 +20,6 @@ class ValidarFormulario {
 
             const campValidado = this.camposValidados()
             
-
             if(campValidado && this.validaSenha()) {
                 this.formulario.submit()
             }
