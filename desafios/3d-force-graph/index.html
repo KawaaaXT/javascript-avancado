@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Grafo 3D</title>
+
+    <script src="https://unpkg.com/3d-force-graph"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #080d1a;
+            overflow: hidden;
+        }
+
+        #grafo {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="grafo"></div>
+
+    <script>
+        const dados = {
+            nodes: [
+                { id: 'JavaScript' },
+                { id: 'HTML' },
+                { id: 'CSS' },
+                { id: 'Node.js' },
+                { id: 'React' },
+                { id: 'Banco de dados' },
+                { id: 'API' },
+                { id: 'Desenvolvimento Web' }
+            ],
+
+            links: [
+                { source: 'JavaScript', target: 'Node.js' },
+                { source: 'JavaScript', target: 'React' },
+                { source: 'JavaScript', target: 'HTML' },
+                { source: 'JavaScript', target: 'CSS' },
+                { source: 'Node.js', target: 'API' },
+                { source: 'API', target: 'Banco de dados' },
+                { source: 'React', target: 'Desenvolvimento Web' },
+                { source: 'HTML', target: 'Desenvolvimento Web' },
+                { source: 'CSS', target: 'Desenvolvimento Web' }
+            ]
+        };
+
+        const Grafo = ForceGraph3D();
+
+        Grafo(document.getElementById('grafo'))
+            .graphData(dados)
+            .nodeLabel('id')
+            .nodeColor(() => '#00d9ff')
+            .backgroundColor('#080d1a')
+            .linkColor(() => '#526b9c')
+            .linkOpacity(0.6)
+            .nodeRelSize(5);
+    </script>
+
+</body>
+</html>
+
