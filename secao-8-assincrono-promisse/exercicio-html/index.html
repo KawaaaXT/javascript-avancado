@@ -1,20 +1,148 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Consulta de Utilizadores</title>
+
+    <link rel="stylesheet" href="..//estyle-css/style.css">
+
+    <script src="../sccripts/exerciciogpt3.js" defer></script>
 </head>
 <body>
-    <section id="container">
-        <h1>Ola Eu Sou Kaua</h1>
-        <a href="../exercicio-html/pagina2.html">PAGINA 2</a>
-        <a href="../exercicio-html/pagina3.html">PAGINA 3</a>
 
-        <div id="resultado">
-            
-        </div>
-    </section>
-    <script src="../sccripts/xhr.js"></script>
+    <main class="container">
+
+        <header class="cabecalho">
+            <span class="etiqueta">CONSULTA</span>
+
+            <h1>Consulta de Utilizadores</h1>
+
+            <p>
+                Pesquisa informações de utilizadores
+                através de uma requisição HTTP.
+            </p>
+        </header>
+
+        <section class="pesquisa">
+
+            <h2>Pesquisar utilizador</h2>
+
+            <form id="formulario">
+
+                <label for="idUsuario">
+                    ID do utilizador
+                </label>
+
+                <div class="campo-pesquisa">
+
+                    <input
+                        type="number"
+                        id="idUsuario"
+                        name="idUsuario"
+                        min="1"
+                        max="10"
+                        placeholder="Ex: 1"
+                        required
+                    >
+
+                    <button type="submit" id="botaoPesquisar">
+                        Pesquisar
+                    </button>
+
+                </div>
+
+                <p class="descricao">
+                    Introduz um ID entre 1 e 10.
+                </p>
+
+            </form>
+
+        </section>
+
+        <section class="resultado">
+
+            <div class="resultado-cabecalho">
+
+                <h2>Resultado da pesquisa</h2>
+
+                <span class="status" id="status">
+                    Aguardando pesquisa
+                </span>
+
+            </div>
+
+            <div class="dados-usuario" id="resultado">
+
+                <div class="avatar">
+                    U
+                </div>
+
+                <div class="informacoes-principais">
+
+                    <h3 id="nome">
+                        Nome do utilizador
+                    </h3>
+
+                    <p id="username">
+                        @username
+                    </p>
+
+                </div>
+
+                <div class="informacao">
+
+                    <span class="titulo-informacao">
+                        E-mail
+                    </span>
+
+                    <p id="email">
+                        Não informado
+                    </p>
+
+                </div>
+
+                <div class="informacao">
+
+                    <span class="titulo-informacao">
+                        Telefone
+                    </span>
+
+                    <p id="telefone">
+                        Não informado
+                    </p>
+
+                </div>
+
+                <div class="informacao">
+
+                    <span class="titulo-informacao">
+                        Website
+                    </span>
+
+                    <p id="website">
+                        Não informado
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <p>
+                Exercício de XMLHttpRequest + Promises
+            </p>
+
+        </footer>
+
+    </main>
+
 </body>
 </html>
