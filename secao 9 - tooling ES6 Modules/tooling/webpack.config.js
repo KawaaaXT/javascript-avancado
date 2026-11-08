@@ -12,10 +12,11 @@ module.exports = {
        rules: [{
          exclude: /node_modules/,
          test: /\.js$/,
+         type: 'javascript/auto',
          use: {
             loader: 'babel-loader', // Integrando o Babel no Meu WebPack
             options: {
-                presets: ['@babel/env']
+                presets: ['@babel/preset-env']
             } 
          }
        }]

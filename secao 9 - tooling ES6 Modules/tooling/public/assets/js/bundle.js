@@ -1,2 +1,2 @@
-console.log("eiiiiiiiiiiiii");
+(()=>{"use strict";console.log("Meu Nome é :   Kaua"),console.log("Meu Sobrenome é : De lima"),console.log("Tenho 21 Anos"),console.log("Atualmente Moro no Porto"),console.log("Sexo: M"),console.log(40)})();
 //# sourceMappingURL=bundle.js.map
