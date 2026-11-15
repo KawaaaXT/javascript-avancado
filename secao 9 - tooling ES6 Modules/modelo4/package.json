@@ -1,0 +1,27 @@
+{
+  "name": "tooling",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "gera": "webpack -w"
+  },
+  "devDependencies": {
+    "@babel/cli": "^8.1.0",
+    "@babel/core": "^8.1.0",
+    "@babel/preset-env": "^8.0.7",
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.3.1"
+  },
+  "dependencies": {
+    "core.js": "^0.4.2",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
