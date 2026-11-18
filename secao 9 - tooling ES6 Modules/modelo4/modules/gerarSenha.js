@@ -1,9 +1,10 @@
 
- import validarDados  from './validarDados'
+ 
+import validarDados from './validarDados.js'
 
-const  gerarSenha = (numeros,letras,simbolos, quantidade) => {
+const  gerarSenha = (numeros,letras, simbolos, quantidade) => {
 
-     const validacao = validarArray(numeros,letras,simbolos,quantidade)
+     const validacao = validarDados(numeros,letras,simbolos,quantidade)
      if(!validacao) return false
 
     const todosCaracteres = numeros.concat(letras,simbolos)

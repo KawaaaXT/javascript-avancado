@@ -8,10 +8,10 @@ const copiarSenha = async (senha) => {
      }
 
     try {
-        await clipboard.writeText(senha)
+        await clipboard.writeText(senha) // escrevendo um texto na área de transferência.
         return true
     }catch(erro) {
-        console.log(`Ocorreu um erro: ${erro}`)
+        console.error (`Ocorreu um erro: ${erro}`)
         return false
     }
 
