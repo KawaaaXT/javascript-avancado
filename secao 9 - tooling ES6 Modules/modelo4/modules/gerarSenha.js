@@ -2,12 +2,14 @@
  
 import validarDados from './validarDados.js'
 
-const  gerarSenha = (numeros,letras, simbolos, quantidade) => {
+const  gerarSenha = (caracteresPermitidos, quantidade) => {
 
-     const validacao = validarDados(numeros,letras,simbolos,quantidade)
+
+     
+     const validacao = validarDados(caracteresPermitidos,quantidade)
      if(!validacao) return false
 
-    const todosCaracteres = numeros.concat(letras,simbolos)
+    const todosCaracteres = caracteresPermitidos
     let senha = ''
 
     for (let i = 0; i < quantidade; i++ ) {

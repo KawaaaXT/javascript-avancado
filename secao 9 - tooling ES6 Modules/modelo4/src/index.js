@@ -1,11 +1,13 @@
 
 import './css/style.css'
-import gerarSenha from './modules/gerarSenha.js'
-import obterCaracteresPermitidos from './modules/selecionarCaracteres.js'
-import copiarSenha from './modules/copiarSenha.js'
+import copiarSenha from '../modules/copiarSenha.js'
+import gerarSenha from '../modules/gerarSenha.js'
+import obterCaracteresPermitidos from '../modules/selecionarCaracteres.js'
+
 
 const botao = document.getElementById('copiar')
 const form = document.getElementById('formulario')
+const quantidadeSenha = document.getElementById('quantidade')
 const senha = document.getElementById('senha')
 const checkBoxes = document.querySelectorAll(
     'input[name=caracteres]'
@@ -13,7 +15,7 @@ const checkBoxes = document.querySelectorAll(
 
 
 const iniciarGeradorSenha = () => {
-    obterCheckBoxClicado()S
+    obterCheckBoxClicado()
     obterSubmitFormulario()
     obterClickBotaoCopiar()
 
@@ -33,13 +35,11 @@ const obterOpcoesSelecionadas = () => {
 const obterCheckBoxClicado = () => {
     form.addEventListener('change', (evento) => { // Detectando  a alteração de estados
         if(evento.target.value === 'letras' || evento.target.value === 'numeros' || evento.target.value === 'simbolos') {
-            console.log(evento.target.checked)
+            console.log(evento.target.checked) // Estado do checkbox
         }
         if(evento.target.matches('input[type=checkbox]')) { // Verificando se o elemento é um input do tipo CheckBox
             console.log('Um CheckBox Foi Alterado')
         }
-
-        obterCaracteresSelecionados()S
     })
 
 }
@@ -48,8 +48,9 @@ const obterSubmitFormulario = () => {
     form.addEventListener('submit', (evento) => {
         evento.preventDefault()
         console.log('Formulario capturado.')
-        const caracteresSelecionados = obterCaracteresSelecionados()
-        const senhaGerada = gerarSenha(caracteresSelecionados)
+        const caracteresPermitidos = obterCaracteresSelecionados()
+        const quantidade = Number(quantidadeSenha.value)
+        const senhaGerada = gerarSenha(caracteresPermitidos, quantidade)
         senha.value = senhaGerada
     })
     
@@ -67,8 +68,8 @@ const obterClickBotaoCopiar = () => {
 }
 
 const obterCaracteresSelecionados = () => {
-    const opcoesEscolhidas = obterOpcoesSelecionadas()
-    const caracteresSelecionados = obterCaracteresPermitidos(opcoesEscolhidas)
+    const caracteresPermitidos= obterOpcoesSelecionadas()
+    const caracteresSelecionados = obterCaracteresPermitidos(caracteresPermitidos)
     return caracteresSelecionados
 
 }
